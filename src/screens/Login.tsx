@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Alert } from "react-native";
+import { Alert, Image } from "react-native";
 import { Box } from "@/components/ui/box";
 import { Text } from "@/components/ui/text";
 import { Button, ButtonText } from "@/components/ui/button";
@@ -34,7 +34,7 @@ export default function Login({ navigation }: any) {
       const googleCredential = auth.GoogleAuthProvider.credential(idToken);
       
       await auth().signInWithCredential(googleCredential);
-      navigation.replace("Dashboard");
+      navigation.replace("MainTabs");
     } catch (error: any) {
       Alert.alert("Google Login Failed", error.message);
     } finally {
@@ -63,7 +63,7 @@ export default function Login({ navigation }: any) {
     setLoading(true);
     try {
       await confirm.confirm(code);
-      navigation.replace("Dashboard");
+      navigation.replace("MainTabs");
     } catch (error: any) {
       Alert.alert("Verification Failed", "Invalid OTP code.");
     } finally {
@@ -75,9 +75,13 @@ export default function Login({ navigation }: any) {
     <SafeAreaView style={{ flex: 1, backgroundColor: "#171717" }}>
       <Box className="flex-1 items-center justify-center p-4">
         <Card className="w-full max-w-[400px] p-6 bg-neutral-800 rounded-xl border border-neutral-700">
-          <Text className="text-2xl font-bold text-white mb-6 text-center">
-            amidFly Access
-          </Text>
+          <Box className="items-center mb-6">
+            <Image 
+              source={require("../assets/amid-logo-white.png")} 
+              style={{ width: 120, height: 120 }} 
+              resizeMode="contain"
+            />
+          </Box>
 
           {/* Dynamic UI: Show Phone Input OR OTP Input based on state */}
           {!confirm ? (
