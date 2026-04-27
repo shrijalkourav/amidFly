@@ -1,3 +1,4 @@
+import "./global.css"
 import { GluestackUIProvider } from "@/components/ui/gluestack-ui-provider";
 import RootNavigator from "./src/navigation/RootNavigator";
 
