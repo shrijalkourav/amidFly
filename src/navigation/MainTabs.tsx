@@ -28,11 +28,11 @@ export default function MainTabs() {
           paddingBottom: insets.bottom, // Prevents tabs from hiding under iOS home indicator
         },
         tabBarIndicatorStyle: {
-          backgroundColor: '#facc15', // The animated yellow slider
+          backgroundColor: '#15aefa', // The animated yellow slider
           height: 3, // Thickness of the slider
           top: 0, // Puts the slider at the top edge of the bottom tab bar
         },
-        tabBarActiveTintColor: '#facc15',
+        tabBarActiveTintColor: '#15aefa',
         tabBarInactiveTintColor: '#737373',
         tabBarIcon: ({ color }) => {
           const size = 24; // Top tabs don't pass a default size, so we define it

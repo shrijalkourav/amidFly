@@ -155,7 +155,7 @@ export default function Controller() {
               <Text className="text-white text-sm font-extrabold">STOP</Text>
             </TouchableOpacity>
             
-            <TouchableOpacity className="bg-blue-600 w-16 h-16 rounded-full border border-blue-800 items-center justify-center">
+            <TouchableOpacity className="bg-blue-600 w-16 h-16 rounded-full border border-green-800 items-center justify-center">
               <Text className="text-white text-xs font-bold text-center">TAKE OFF</Text>
             </TouchableOpacity>
           </HStack>
